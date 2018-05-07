@@ -15,34 +15,37 @@ class FindTheWinner
         System.out.println("Enter Game Mode: ");
         String game_mode = scanner.nextLine().toUpperCase();
 
-        System.out.println("Enter the Number of Dice Amount ");
-        int num_dice = scanner.nextInt();
+        System.out.println("Enter the Number of Dice Amount for Andrea");
+        int num_dice_andrea = scanner.nextInt();
 
-        int[] andreaArr = new int[num_dice];
-        int[] mariaArr = new int[num_dice];
+        System.out.println("Enter the Number of Dice Amount for Maria");
+        int num_dice_maria = scanner.nextInt();
 
-        for (int i = 0; i < num_dice; i++)
+        int[] andreaArr = new int[num_dice_andrea];
+        int[] mariaArr = new int[num_dice_maria];
+
+        for (int i = 0; i < num_dice_andrea; i++)
         {
             System.out.println("Enter Dice Value for Andrea ");
             int andrea_value = scanner.nextInt();
             andreaArr[i] = andrea_value;
         }
 
-        for (int i = 0; i < num_dice; i++)
+        for (int i = 0; i < num_dice_maria; i++)
         {
             System.out.println("Enter Dice Value for Maria ");
             int maria_value = scanner.nextInt();
             mariaArr[i] = maria_value;
         }
 
-        String theWinner = winner(andreaArr, mariaArr, game_mode);
+        String theWinner = winner(num_dice_andrea,andreaArr,num_dice_maria,mariaArr, game_mode);
         System.out.println("The Winner is : " + theWinner);
 
         scanner.close();
     }
 
 
-    static String winner(int[] andreaArr, int[] mariaArr, String s)
+    static String winner(int aNum,int[] andreaArr,int bNum, int[] mariaArr, String s)
     {
         int sum_andrea = 0, sum_maria = 0;
         int total_sum_andrea = 0, total_sum_maria = 0;
