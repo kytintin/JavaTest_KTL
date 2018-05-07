@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class ConsecutiveSum
+class Consecutive_Sum
 {
    
     public static void main(String[] args)
@@ -28,6 +28,7 @@ class ConsecutiveSum
                sumArr = sumArr + j;
               
                if(sumArr == sum)
+            //    System.out.println(j);
                     total++;             
            }
            /* Reset the Sum of Arrays */ 

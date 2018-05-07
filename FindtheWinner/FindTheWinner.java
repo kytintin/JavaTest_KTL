@@ -58,6 +58,8 @@ class FindTheWinner
 
                     sum_maria = mariaArr[i] - andreaArr[i];
                     total_sum_maria += sum_maria;
+
+                    System.out.println(total_sum_andrea+" "+total_sum_maria);
                 }
                 else if(s.equals("ODD") && (i%2) == 1)
                 {
@@ -66,6 +68,8 @@ class FindTheWinner
 
                     sum_maria = mariaArr[i] - andreaArr[i];
                     total_sum_maria += sum_maria;
+
+                    System.out.println(total_sum_andrea+" "+total_sum_maria);
                 }
             }
 
